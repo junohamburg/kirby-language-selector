@@ -42,7 +42,7 @@ Please note: On small viewports, the default language dropdown is displayed.
 return [
   'junohamburg.language-selector' => [
     'allowDelete' => false, // Hide dropdown for deleting translations, default: true
-  ],
+  ]
 ];
 ```
 
