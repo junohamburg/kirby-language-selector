@@ -32,6 +32,20 @@ Install the plugin in a multi-language Kirby site.
 
 Please note: On small viewports, the default language dropdown is displayed.
 
+## Available options
+
+**site/config/config.php**
+
+```php
+<?php
+
+return [
+  'junohamburg.language-selector' => [
+    'allowDelete' => false, // Hide dropdown for deleting translations, default: true
+  ],
+];
+```
+
 ## Plugin Translations
 
 For now, the dialog text and tooltips are only translated to English and German. Feel free to add a pull request with a new yml translation file in [this folder](https://github.com/junohamburg/kirby-language-selector/tree/main/translations).

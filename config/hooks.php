@@ -58,6 +58,19 @@ return [
       return json_encode($languages);
     }, $response->body());
 
+    // Add plugin options to $config
+    $searchPattern = '/(?<="\$config":).*(?=,"\$system")/';
+
+    $modifiedBody = preg_replace_callback($searchPattern, function ($match) use ($target) {
+      $config = json_decode($match[0], true);
+
+      $config['languageSelector'] = [
+        'allowDelete' => $this->option('junohamburg.language-selector.allowDelete'),
+      ];
+
+      return json_encode($config);
+    }, $modifiedBody);
+
     // Return new response with modified body
     return new Response(
       $modifiedBody,

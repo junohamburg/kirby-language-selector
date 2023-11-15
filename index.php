@@ -1,6 +1,9 @@
 <?php
 
 Kirby::plugin('junohamburg/language-selector', [
+  'options' => [
+    'allowDelete' => true,
+  ],
   'hooks' => require __DIR__ . '/config/hooks.php',
   'api' => require __DIR__ . '/config/api.php',
   'translations' => A::keyBy(A::map(
