@@ -1,0 +1,31 @@
+@container (max-width: 29.9375rem) {
+  .k-language-selector {
+    display: none;
+  }
+}
+
+@container (min-width: 30rem) {
+  .k-languages-dropdown {
+    display: none;
+  }
+}
+
+/* Language Selector style */
+.k-language-selector > .k-button {
+  text-transform: uppercase;
+}
+
+/* Same width buttons */
+.k-language-selector > .k-button:not([data-dropdown='true']) {
+  --button-padding: 0;
+  min-width: 2rem;
+}
+
+/* Vertical line between buttons */
+.k-language-selector > .k-button:not(:first-child) {
+  --theme-color-500: var(--color-gray-400);
+}
+
+.k-language-selector > .k-button[data-theme='empty']:not(:last-child) {
+  border-right: none;
+}

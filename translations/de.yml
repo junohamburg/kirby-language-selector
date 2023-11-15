@@ -1,0 +1,9 @@
+title: Übersetzungen
+settings: Übersetzungseinstellungen
+empty: nicht übersetzt
+delete: Übersetzung in {language} löschen
+site.delete.confirm: Willst du die Übersetzung in <strong>{language}</strong> wirklich löschen?
+page.delete.confirm: Willst du die Übersetzung in <strong>{language}</strong> der Seite <strong>{title}</strong> wirklich löschen?
+file.delete.confirm: Willst du die Übersetzung in <strong>{language}</strong> der Datei <strong>{title}</strong> wirklich löschen?
+user.delete.confirm: Willst du die Übersetzung in <strong>{language}</strong> des Accounts <strong>{title}</strong> wirklich löschen?
+account.delete.confirm: Willst du die Übersetzung in <strong>{language}</strong> deines Accounts wirklich löschen?

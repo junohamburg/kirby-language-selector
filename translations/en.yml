@@ -1,0 +1,9 @@
+title: Translations
+settings: Translation settings
+empty: not translated
+delete: Delete {language} translation
+site.delete.confirm: Do you really want to delete the <strong>{language}</strong> translation?
+page.delete.confirm: Do you really want to delete the <strong>{language}</strong> translation for the page <strong>{title}</strong>?
+file.delete.confirm: Do you really want to delete the <strong>{language}</strong> translation for the file <strong>{title}</strong>?
+user.delete.confirm: Do you really want to delete the <strong>{language}</strong> translation for the user <strong>{title}</strong>?
+account.delete.confirm: Do you really want to delete the <strong>{language}</strong> translation for your account?
