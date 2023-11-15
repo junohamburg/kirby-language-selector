@@ -1,7 +1,7 @@
 <?php
 
 return [
-  // Add custom language options to panel fiber response
+  // Extend panel fiber response
   'panel.route:after' => function ($route, $path, $method, $response) {
     if (!$this->multilang() || $method !== 'GET') return $response;
 
@@ -40,7 +40,7 @@ return [
 
     if (!$target) return $response;
 
-    // Use regex to modify languages array in fiber response,
+    // Use regex to modify $languages array in fiber response,
     // Reference: https://github.com/getkirby/kirby/blob/main/src/Panel/View.php
     $searchPattern = '/(?<="\$languages":).*(?=,"\$menu")/';
 
