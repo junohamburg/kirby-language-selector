@@ -5,6 +5,7 @@ This plugin for **Kirby 4** replaces the default language dropdown with a custom
 ![Language Selector in Kirby panel](https://github.com/junohamburg/kirby-language-selector/assets/77532479/008eba33-d93f-45dd-bec1-5b7b65147b55)
 
 ### UI states
+
 ![Language Selector states](https://github.com/junohamburg/kirby-language-selector/assets/77532479/98926f36-36f3-40f4-8960-a659cad74832)<br>
 Left to right: No translations, some translations, dropdown.
 
@@ -48,7 +49,7 @@ return [
 
 ## Plugin Translations
 
-For now, the dialog text and tooltips are only translated to English and German. Feel free to add a pull request with a new yml translation file in [this folder](https://github.com/junohamburg/kirby-language-selector/tree/main/translations).
+The dialog text and tooltips are not translated in every language the Kirby panel supports. For missing languages, feel free to add a pull request with a new `yml` translation file in [this folder](https://github.com/junohamburg/kirby-language-selector/tree/main/translations).
 
 ## Disclaimer
 
