@@ -142,7 +142,9 @@ panel.plugin('junohamburg/language-selector', {
             let title = language.name;
 
             if (language.hasTranslation === false) {
-              title += ', ' + this.$t(`${this.prefix}.empty`);
+              title = this.$t(`${this.prefix}.empty`, {
+                language: language.name
+              });
             }
 
             return title;

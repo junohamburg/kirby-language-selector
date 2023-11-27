@@ -1,6 +1,6 @@
 title: Translations
 settings: Translation settings
-empty: not translated
+empty: {language}, not translated
 delete: Delete {language} translation
 site.delete.confirm: Do you really want to delete the <strong>{language}</strong> translation?
 page.delete.confirm: Do you really want to delete the <strong>{language}</strong> translation for the page <strong>{title}</strong>?

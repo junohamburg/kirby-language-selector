@@ -1,6 +1,6 @@
 title: Übersetzungen
 settings: Übersetzungseinstellungen
-empty: nicht übersetzt
+empty: {language}, nicht übersetzt
 delete: Übersetzung in {language} löschen
 site.delete.confirm: Willst du die Übersetzung in <strong>{language}</strong> wirklich löschen?
 page.delete.confirm: Willst du die Übersetzung in <strong>{language}</strong> der Seite <strong>{title}</strong> wirklich löschen?
