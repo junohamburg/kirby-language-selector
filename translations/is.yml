@@ -1,6 +1,6 @@
 title: Þýðingar
 settings: Stillingar þýðingar
-empty: {language}, ekki þýtt
+empty: "{language}, ekki þýtt"
 delete: Eyða {language} þýðingu
 site.delete.confirm: Ertu nú alveg viss um að þú viljir eyða <strong>{language}</strong> þýðingunni?
 page.delete.confirm: Ertu nú alveg viss um að þú viljir eyða <strong>{language}</strong> þýðingunni fyrir <strong>{title}</strong> síðuna?
