@@ -1,6 +1,6 @@
 title: Traductions
 settings: Paramètres des traductions
-empty: "{language}, non traduit"
+empty: '{language}, non traduit'
 delete: Supprimer la traduction en {language}
 site.delete.confirm: Voulez-vous vraiment supprimer la traduction en <strong>{language}</strong> ?
 page.delete.confirm: Voulez-vous vraiment supprimer la traduction en <strong>{language}</strong> de la page <strong>{title}</strong> ?
