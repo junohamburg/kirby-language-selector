@@ -2,11 +2,11 @@
 
 This plugin for **Kirby 4** replaces the default language dropdown with a customized version. It displays the translation state of each language and adds a dropdown for deleting translations.
 
-![Language Selector in Kirby panel](https://github.com/junohamburg/kirby-language-selector/assets/77532479/008eba33-d93f-45dd-bec1-5b7b65147b55)
+![Language Selector in Kirby panel](https://github.com/junohamburg/kirby-language-selector/assets/77532479/5beffbc7-22d5-42b8-8026-8e379db6b99f)
 
 ### UI states
 
-![Language Selector states](https://github.com/junohamburg/kirby-language-selector/assets/77532479/98926f36-36f3-40f4-8960-a659cad74832)<br>
+![Language Selector states](https://github.com/junohamburg/kirby-language-selector/assets/77532479/8ecb96a9-c406-4664-99c9-44ceb628dfa7)<br>
 Left to right: No translations, some translations, dropdown.
 
 ## Installation
