@@ -15,16 +15,16 @@ Left to right: No translations, some translations, dropdown.
 
 Download and copy this repository to `/site/plugins/kirby-language-selector`.
 
-### Git submodule
-
-```
-git submodule add https://github.com/junohamburg/kirby-language-selector.git site/plugins/kirby-language-selector
-```
-
 ### Composer
 
 ```
 composer require junohamburg/kirby-language-selector
+```
+
+### Git submodule
+
+```
+git submodule add https://github.com/junohamburg/kirby-language-selector.git site/plugins/kirby-language-selector
 ```
 
 ## Setup
