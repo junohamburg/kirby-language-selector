@@ -55,7 +55,9 @@ panel.plugin('junohamburg/language-selector', {
             });
           },
           dropdownVisible() {
-            if (!panel.config.languageSelector.allowDelete) return false;
+            if (panel.config.languageSelector?.allowDelete === false) {
+              return false;
+            }
 
             // Check for existing translations
             let existingTranslations = 0;
