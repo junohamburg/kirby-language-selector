@@ -1,0 +1,9 @@
+title: Traduções
+settings: Configurações de tradução
+empty: '{language}, não traduzido'
+delete: Apagar a tradução em {language}
+site.delete.confirm: Tem a certeza que pretende apagar a tradução em <strong>{language}</strong>?
+page.delete.confirm: Tem a certeza que pretende apagar a tradução em <strong>{language}</strong> para a página <strong>{title}</strong>?
+file.delete.confirm: Tem a certeza que pretende apagar a tradução em <strong>{language}</strong> para o ficheiro <strong>{title}</strong>?
+user.delete.confirm: Tem a certeza que pretende apagar a tradução em <strong>{language}</strong> para o utilizador <strong>{title}</strong>?
+account.delete.confirm: Tem a certeza que pretende apagar a tradução em <strong>{language}</strong> para a sua conta?
