@@ -154,8 +154,8 @@ panel.plugin('junohamburg/language-selector', {
         },
 
         template: `
-          <div>
-            <div v-if="languages.length > 1" class="k-languages-dropdown">
+          <div v-if="languages.length > 1">
+            <div class="k-languages-dropdown">
               <k-button
                 :dropdown="true"
                 :text="code"
