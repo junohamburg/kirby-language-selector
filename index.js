@@ -169,7 +169,6 @@ panel.plugin('junohamburg/language-selector', {
             </div>
 
             <k-button-group
-              v-if="languages.length > 1"
               layout="collapsed"
               class="k-language-selector"
               :aria-label="$t(prefix + '.title')"
