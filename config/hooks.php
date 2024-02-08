@@ -1,5 +1,8 @@
 <?php
 
+use Kirby\Http\Response;
+use Kirby\Toolkit\Str;
+
 return [
   // Extend panel fiber response
   'panel.route:after' => function ($route, $path, $method, $response) {

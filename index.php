@@ -1,7 +1,11 @@
 <?php
 
-use Kirby\Cms\App as Kirby;
 use Composer\Semver\Semver;
+use Kirby\Cms\App as Kirby;
+use Kirby\Data\Yaml;
+use Kirby\Filesystem\Dir;
+use Kirby\Filesystem\F;
+use Kirby\Toolkit\A;
 
 // Validate Kirby version
 if (Semver::satisfies(Kirby::version() ?? '0.0.0', '~4.0') === false) {

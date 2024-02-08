@@ -1,5 +1,8 @@
 <?php
 
+use Kirby\Filesystem\F;
+use Kirby\Toolkit\Str;
+
 return [
   // Routes for deleting translations
   'routes' => function ($kirby) {
