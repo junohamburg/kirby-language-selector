@@ -155,19 +155,6 @@ panel.plugin('junohamburg/language-selector', {
 
         template: `
           <div v-if="languages.length > 1">
-            <div class="k-languages-dropdown">
-              <k-button
-                :dropdown="true"
-                :text="code"
-                icon="translate"
-                responsive="text"
-                size="sm"
-                variant="filled"
-                @click="$refs.languages.toggle()"
-              />
-              <k-dropdown-content ref="languages" :options="options" />
-            </div>
-
             <k-button-group
               layout="collapsed"
               class="k-language-selector"
@@ -198,6 +185,19 @@ panel.plugin('junohamburg/language-selector', {
               />
               <k-dropdown-content ref="options" alignX="end" :options="dropdownOptions" />
             </k-button-group>
+
+            <div class="k-languages-dropdown">
+              <k-button
+                :dropdown="true"
+                :text="code"
+                icon="translate"
+                responsive="text"
+                size="sm"
+                variant="filled"
+                @click="$refs.languages.toggle()"
+              />
+              <k-dropdown-content ref="languages" :options="options" />
+            </div>
           </div>
         `
       });

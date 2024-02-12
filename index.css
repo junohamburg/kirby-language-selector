@@ -5,7 +5,7 @@
 }
 
 @container (min-width: 30rem) {
-  .k-languages-dropdown {
+  .k-language-selector + .k-languages-dropdown {
     display: none;
   }
 }
