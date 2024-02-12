@@ -175,6 +175,7 @@ panel.plugin('junohamburg/language-selector', {
             >
               <k-button
                 v-for="lang in sortedLanguages"
+                :key="lang.code"
                 size="sm"
                 variant="filled"
                 :responsive="true"
