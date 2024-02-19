@@ -47,9 +47,9 @@ return [
 ];
 ```
 
-## Plugin Translations
+## Plugin Translations, Contributions
 
-The dialog text and tooltips are not translated in every language the Kirby panel supports. For missing languages, feel free to add a pull request with a new `yml` translation file in [this folder](https://github.com/junohamburg/kirby-language-selector/tree/main/translations).
+The dialog text and tooltips are not translated into every language that the Kirby panel supports. For missing languages, feel free to add a pull request with a new `yml` translation file in [this folder](https://github.com/junohamburg/kirby-language-selector/tree/main/translations).
 
 ## Disclaimer
 
