@@ -5,18 +5,22 @@ use Kirby\Filesystem\Dir;
 use Kirby\Filesystem\F;
 use Kirby\Toolkit\A;
 
-return A::keyBy(A::map(
-	Dir::read(dirname(__DIR__) . '/translations'),
-	function ($file) {
-		$translations = Yaml::decode(F::read(dirname(__DIR__) . '/translations/' . $file));
-		$translations['lang'] = F::name($file);
+$translations = [];
+$root         = dirname(__DIR__) . '/translations';
 
-		$pluginTranslations = [];
+foreach (Dir::read($root) as $file) {
+	$code        = F::name($file);
+	$translation = F::read($root . '/' . $file);
+	$translation = Yaml::decode($translation);
 
-		foreach ($translations as $key => $value) {
-			$pluginTranslations['junohamburg.language-selector.' . $key] = $value;
-		}
+  // add prefix to keys
+	$translations[$code] = array_combine(
+    A::map(
+      array_keys($translation),
+      fn ($key) => 'junohamburg.language-selector.' . $key
+    ),
+    $translation
+  );
+}
 
-		return $pluginTranslations;
-	}
-), 'junohamburg.language-selector.lang');
+return $translations;
