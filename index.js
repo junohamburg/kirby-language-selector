@@ -26,28 +26,10 @@ panel.plugin('junohamburg/language-selector', {
           this.$panel.dialog.open(
             this.$panel.view.path + '/translation/' + code
           );
-        },
-        theme(language) {
-          if (language.code === this.language.code) {
-            return 'dark';
-          }
-
-          if (language.hasTranslation === false) {
-            return 'empty';
-          }
-        },
-        title(language) {
-          if (language.hasTranslation === false) {
-            return this.$t('junohamburg.language-selector.empty', {
-              language: language.text
-            });
-          }
-
-          return language.text;
         }
       },
       template: `
-        <div v-if="languages.length > 1">
+        <div>
           <k-button-group
             layout="collapsed"
             class="k-language-selector"
@@ -58,11 +40,9 @@ panel.plugin('junohamburg/language-selector', {
               :key="lang.code"
               size="sm"
               variant="filled"
+              v-bind="lang"
               :responsive="true"
-              :current="lang.code === language.code"
               :text="lang.code"
-              :title="title(lang)"
-              :theme="theme(lang)"
               @click="change(lang)"
             />
             <k-button

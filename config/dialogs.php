@@ -1,8 +1,12 @@
 <?php
 
 use Kirby\Cms\App;
+use Kirby\Cms\File;
 use Kirby\Cms\Find;
 use Kirby\Cms\ModelWithContent;
+use Kirby\Cms\Page;
+use Kirby\Cms\Site;
+use Kirby\Cms\User;
 use Kirby\Toolkit\Escape;
 use Kirby\Toolkit\I18n;
 
@@ -18,10 +22,12 @@ $load = function (ModelWithContent $model, string $language) {
         'junohamburg.language-selector.' . $model::CLASS_ALIAS . '.delete.confirm',
         [
           'language' => Escape::html($language->name()),
-          'title'    => match ($model::CLASS_ALIAS) {
-            'file'  => $model->filename(),
-            'user'  => $model->name() ?? $model->email(),
-            default => $model->title(),
+          'title'    => match (true) {
+            $model instanceof Site => $model->title(),
+            $model instanceof Page => $model->title(),
+            $model instanceof File => $model->filename(),
+            $model instanceof User => $model->name() ?? $model->email(),
+            default => throw new Exception('Invalid model type'),
           },
         ]
       )
