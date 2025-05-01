@@ -45,46 +45,42 @@ $submit = function (ModelWithContent $model, string $language) {
 
 // Dialog routes
 return [
-  'page.translation.delete' => [
+  'page.translation.delete' => $forModel = [
     'pattern' => '(pages/.*?)/translation/(:any)',
-    'load'    => $loadModel = fn (string $model, string $language) => $load(model: Find::parent($model), language: $language),
-    'submit'  => $submitModel = fn (string $model, string $language) => $submit(model: Find::parent($model), language: $language)
+    'load'    => fn (string $model, string $language) =>
+      $load(model: Find::parent($model), language: $language),
+    'submit'  => fn (string $model, string $language) =>
+      $submit(model: Find::parent($model), language: $language)
   ],
-  'page.file.translation.delete' => [
+  'page.file.translation.delete' => $forFile = [
     'pattern' => '(pages/.*?)/files/(:any)/translation/(:any)',
-    'load'    => $loadFile = fn (string $model, string $filename, string $language) =>
+    'load'    => fn (string $model, string $filename, string $language) =>
       $load(model: Find::file($model, $filename), language: $language),
-    'submit'  => $submitFile = fn (string $model, string $filename, string $language) =>
+    'submit'  => fn (string $model, string $filename, string $language) =>
       $submit(model: Find::file($model, $filename), language: $language)
   ],
   'site.translation.delete' => [
-    'pattern' => '(site)/translation/(:any)',
-    'load'    => $loadModel,
-    'submit'  => $submitModel
+    ...$forModel,
+    'pattern' => '(site)/translation/(:any)'
   ],
   'site.file.translation.delete' => [
-    'pattern' => '(site)/files/(:any)/translation/(:any)',
-    'load'    => $loadFile,
-    'submit'  => $submitFile
+    ...$forFile,
+    'pattern' => '(site)/files/(:any)/translation/(:any)'
   ],
   'user.translation.delete' => [
-    'pattern' => '(users/.*?)/translation/(:any)',
-    'load'    => $loadModel,
-    'submit'  => $submitModel
+    ...$forModel,
+    'pattern' => '(users/.*?)/translation/(:any)'
   ],
   'user.file.translation.delete' => [
-    'pattern' => '(users/.*?)/files/(:any)/translation/(:any)',
-    'load'    => $loadFile,
-    'submit'  => $submitFile
+    ...$forFile,
+    'pattern' => '(users/.*?)/files/(:any)/translation/(:any)'
   ],
   'account.translation.delete' => [
-    'pattern' => '(account)/translation/(:any)',
-    'load'    => $loadModel,
-    'submit'  => $submitModel
+    ...$forModel,
+    'pattern' => '(account)/translation/(:any)'
   ],
   'account.file.translation.delete' => [
-    'pattern' => '(account)/files/(:any)/translation/(:any)',
-    'load'    => $loadFile,
-    'submit'  => $submitFile
+    ...$forFile,
+    'pattern' => '(account)/files/(:any)/translation/(:any)'
   ]
 ];
