@@ -1,5 +1,5 @@
-@container (max-width: 29.9375rem) {
-  .k-language-selector {
+@container (max-width: 30rem) {
+  .k-button-group.k-language-selector {
     display: none;
   }
 }
@@ -11,7 +11,8 @@
 }
 
 /* Language Selector style */
-.k-language-selector > .k-button {
+.k-language-selector > .k-button,
+.k-language-selector + .k-languages-dropdown > .k-button {
   text-transform: uppercase;
 }
 
@@ -19,13 +20,4 @@
 .k-language-selector > .k-button:not([data-dropdown='true']) {
   --button-padding: 0;
   min-width: 2rem;
-}
-
-/* Vertical line between buttons */
-.k-language-selector > .k-button:not(:first-child) {
-  --theme-color-500: var(--color-gray-400);
-}
-
-.k-language-selector > .k-button[data-theme='empty']:not(:last-child) {
-  border-right: none;
 }

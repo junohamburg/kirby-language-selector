@@ -12,3 +12,6 @@ trim_trailing_whitespace = true
 [*.md,*.txt]
 trim_trailing_whitespace = false
 insert_final_newline = false
+
+[*.php]
+indent_size = 2
