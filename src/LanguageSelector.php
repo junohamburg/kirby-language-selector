@@ -35,6 +35,10 @@ class LanguageSelector extends ViewButton
 
   public function props(): array
   {
+    if ($this->kirby->language() === null) {
+      return parent::props();
+    }
+
     return [
       ...parent::props(),
       'dropdown'  => $this->model->panel()->url(true) . '/languages',
