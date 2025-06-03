@@ -17,10 +17,16 @@ Kirby::plugin('junohamburg/language-selector', [
     'allowDelete' => true,
   ],
   'areas' => [
-    'site' => fn () => [
-      'buttons' => require __DIR__ . '/config/buttons.php',
-      'dialogs' => require __DIR__ . '/config/dialogs.php',
-    ]
+    'site' => function () {
+      if (Kirby::instance()->language() === null) {
+        return [];
+      }
+
+      return [
+        'buttons' => require __DIR__ . '/config/buttons.php',
+        'dialogs' => require __DIR__ . '/config/dialogs.php',
+      ];
+    }
   ],
   'translations' => require __DIR__ . '/config/translations.php',
 ]);
