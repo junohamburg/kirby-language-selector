@@ -93,6 +93,18 @@ export default {
   text-transform: uppercase;
 }
 
+.k-language-selector > .k-button.k-button {
+  --theme-color-border: light-dark(var(--color-gray-400), var(--color-border));
+}
+
+.k-language-selector > .k-button[data-theme='empty'] {
+  border-left-color: transparent;
+}
+
+.k-language-selector > .k-button[data-theme='empty']:not(:last-child) {
+  border-right-color: transparent;
+}
+
 /* Same width buttons */
 .k-language-selector > .k-button:not([data-dropdown='true']) {
   --button-padding: 0;
