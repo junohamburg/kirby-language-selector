@@ -34,6 +34,7 @@
     </k-button-group>
 
     <k-languages-dropdown
+      ref="dropdown"
       :options="dropdown"
       :text="language.code"
       icon="translate"
@@ -61,11 +62,7 @@ export default {
   },
   methods: {
     change(language) {
-      this.$reload({
-        query: {
-          language: language.code
-        }
-      });
+      return this.$refs.dropdown.change(language);
     },
     remove(code) {
       this.$panel.dialog.open(this.$panel.view.path + '/translation/' + code);
